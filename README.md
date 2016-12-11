@@ -331,3 +331,240 @@ box-sizing:content-box | border-box;
 - min-height 盒子的最小高，同上
 
 ps:max-width和min-width从IE9开始兼容
+
+## SVG
+svg是用xml描述的可缩放矢量图(scalable vector graphics),矢量图所占空间小，文件小，所以传输速度快，缩放不变形，可高清度打印但也很难描述色彩丰富的的逼真效果而且只有高版本浏览器支持。
+
+### 使用方法
+- 可直接用浏览器打开
+- 可以使用img标签显示
+- 作为盒子的背景图
+- 使用svg标签展示
+
+### 基本属性
+- fill 给图形填充颜色，默认为黑色
+- stroke 描边，默认不带描边
+- stroke-width 描边的宽度
+
+### 基本图形
+
+- rect 矩形
+~~~
+<!-- 画矩形,其中x为矩形左上角横坐标、y为左上角纵坐标、width矩形宽度、height矩形高度、rx和ry是画圆角半径的横纵左边 -->
+<rect x="20" y="20" width="200" height="200" rx="20" ry="20" fill="blue" stroke="orange" stroke-width="5" />
+~~~
+
+- circle 圆形
+~~~
+<!-- 画圆，cx圆心的横坐标、cy圆心的纵坐标、r为园的半径 -->
+<circle cx="350" cy="120" r="100" fill="blue" stroke="orange" stroke-width="5" />
+~~~
+
+- ellipse 椭圆
+~~~
+<!-- 画椭圆，cx椭圆中心点横坐标、cy椭圆中心点纵坐标、rx椭圆长弧半径、ry椭圆短弧半径 -->
+<ellipse cx="650" cy="120" rx="150" ry="100" fill="blue" stroke="orange" stroke-width="5" />
+~~~
+
+- line 画线段
+~~~
+<!-- 画线，x1和y1是线段的起点横纵坐标、x2和y2是线段的终点的横纵坐标 -->
+<line x1="900" y1="120" x2="1200" y2="200" stroke="orange" stroke-width="5" />
+~~~
+
+- polyline 多条线
+~~~
+<!-- 画多条线，points里面的参数为多条线段之间的连接点的横纵坐标 -->
+<polyline points="100 380 300 380 300 580 100 480" fill="none" stroke="orange" stroke-width="5" />
+~~~
+
+- polygon 画多边形
+~~~
+<!-- 多边型，points参数同上 -->
+<polygon points="400 380 700 380 800 580 500 480" fill="none" stroke="orange" stroke-width="5" />
+~~~
+
+- path 路径
+~~~
+<!-- 路径，参数d中M表示当前画笔移动到什么地方开始后面以空格分开横纵坐标、L表示从当前位置绘制线段到后面以空格分隔的横纵坐标的目标位置，如果为小写l则为相对路径相对于当前位置的距离 -->
+<path d="M 1100 400 L 1200 400" fill="none" stroke="orange" stroke-width="5"  />
+<path d="M 1100 500 l 100 0" fill="none" stroke="orange" stroke-width="5"  />
+~~~
+
+<img src="images/path.gif">
+
+画弧度的参数：
+<img src="images/arc.gif">
+~~~
+<!-- M后面是起始点的横纵坐标、A后面依次为椭圆的x轴半径 椭圆的y轴半径 与长轴的夹角 大小弧度(0表示小弧度，1表示大弧度) 弧度方向(0表示逆时针，1表示要顺时针 终止点的横坐标 终止点的纵坐标) -->
+<path d="M 44 140 A 80 80 0 0 0 150 140" fill="none" stroke="#fff" stroke-width="2"  />
+~~~
+
+### svg动画
+
+- svg动画是用animate实现，需要svg中的图形标签改为双标签
+- 多个动画需要使用多个animate标签，animate标签中需要一个属性：begin
+- 让动画停留在终点需要修改fill属性为clear(默认值，回到初始状态)或者freeze(停留在结束状态)
+- 动画重复次数使用repeatCount，后面跟上动画需要执行的次数，如果需要无限次运动使用indefinite
+
+~~~
+<!-- begin后面表示当id为eyestoleft的动画结束后过2s执行 -->
+<circle cx="45" cy="80" r="10" fill="#000">
+    <animate id="eyestoright" attributeType="xml" attributeName="cx" from="45" to="55" dur="1" begin="0;eyestoleft.end+2s"/>
+    <animate id="eyestoleft" attributeType="xml" attributeName="cx" from="55" to="45" dur="1" begin="eyestoright.end+2s"/>
+</circle>
+~~~
+
+## canvas
+定义：<canvas>您的浏览器不支持canvas</canvas>，从IE9开始支持canvas，注意canvas的宽高需要用html标签属性来设置，如果用css设置里面的文字或图案会变形。
+
+### canvas绘图
+
+#### 绘制矩形
+- fillRect(矩形左上角横坐标,矩形左上角的纵坐标,宽度,高度) 填充矩形
+- strokeRect(矩形左上角横坐标,矩形左上角的纵坐标,宽度,高度) 描边矩形
+- clearRect(矩形左上角横坐标,矩形左上角的纵坐标,宽度,高度) 清除矩形
+- .fillStyle="颜色表示法" 设置填充样式，默认填充为黑色
+- .strokeStyle="颜色表示法" 设置描边样式，默认描边颜色为灰色
+- .lineWidth=数字 设置描边的变宽
+~~~
+var cvs = document.getElementById('cvs');
+if(cvs.getContext){
+    var cvs_context = cvs.getContext('2d');
+
+    //填充矩形
+    cvs_context.fillStyle = 'skyblue';
+    cvs_context.fillRect(10,10,200,200);
+
+    //描边矩形
+    cvs_context.strokeStyle = 'green'; //描边样式
+    cvs_context.lineWidth = 3;  //描边线的宽度
+    cvs_context.strokeRect(220,10,200,200);
+
+    //清除矩形
+    cvs_context.clearRect(20,20,180,180);
+}
+~~~
+绘制矩形中实际是封装好了beginPath()和closePath()
+
+#### 绘制路径
+- moveTo(横坐标,纵坐标) 拿起画笔移动到指定位置
+- lineTo(横坐标,纵坐标) 从画笔停留的位置画线段到指定位置，如果没有写moveTo那么第一个lineTo会被认为是moveTo
+- 开始绘制新路径之前需要加上beginPath()表示开启新路径，如果绘制的封闭区域，需要在绘制完成后加上closePath()，表示在开始和结束之前画线段封闭路径
+- canvas描边的时候是往图形的里面描一半 ，往图形外面描一半
+~~~
+// 绘制三角形
+cvs_context.beginPath();    //开启新路径
+cvs_context.moveTo(600, 100);
+cvs_context.lineTo(650, 200);
+cvs_context.lineTo(550, 200);
+cvs_context.closePath();    //在开始位置与结束位置之间画线段，封闭路径
+cvs_context.strokeStyle = 'rgba(255, 100, 0, 0.5)';
+cvs_context.fill();
+cvs_context.stroke();
+~~~
+
+#### 绘制弧线
+- arc(圆心的横坐标,圆心的纵坐标,半径,起始弧度,结束弧度,是否逆时针)
+~~~
+// 绘制弧线
+cvs_context.beginPath();
+cvs_context.arc(150, 350, 100, 0, Math.PI, true);
+cvs_context.strokeStyle = "#f60";
+cvs_context.stroke();
+
+cvs_context.beginPath();
+cvs_context.arc(600, 400, 100, 0, Math.PI, true);
+cvs_context.fill();
+~~~
+
+#### 绘制图片
+- drawImage(图片对象,绘制图片左上角的横坐标,绘制图片左上角的纵坐标,图片的宽度,图片的高度)
+- drawImage(图片对象,在精灵图中的横坐标,在精灵图中的纵坐标,在精灵图中的宽度,在精灵图中的高度,绘制canvas上的横坐标,绘制canvas上的纵坐标,图片的宽度,图片的高度)
+
+ps:绘制图片时需要加：图片对象.onload = function(){} 要等图片加载完成后才能画
+~~~
+//画图片
+var img = new Image();
+img.src = 'images/tainiu.jpg';
+img.onload = function(){
+    cvs_context.drawImage(img, 760, 100, 200, 250);
+}
+~~~
+
+#### 绘制文字
+- fillText(需要绘制的文字,横坐标,纵坐标) 填充文字
+- strokeText(需要绘制的文字,横坐标,纵坐标) 描边文字
+~~~
+// 绘制文字
+cvs_context.beginPath();
+cvs_context.fillStyle = 'green';
+cvs_context.font = '30px "微软雅黑"';
+cvs_context.strokeText('土家肸哥', 790, 400);
+cvs_context.fillText('土家肸哥', 790, 400);
+~~~
+
+### canvas动画
+canvas的本质是像素化的，所以一旦绘制在画布上就变成像素点无法在得到刚才的图片，只能清除了重新画
+
+#### canvas变形
+- .translate(x轴正向,y轴正向) 平移坐标轴
+- .rotate(转的弧度) 旋转
+- .scale(x轴缩放的比例,y轴缩放的比例) 缩放变形，canvas中必须写两个参数
+- .save() 在变形前将坐标轴保存，只要一restore()前面所有的save()都会失效
+- .restore() 将坐标轴恢复原状，恢复到上次save()的状态，如果没有保存，不能恢复
+~~~
+var cvs_context = cvs.getContext('2d');
+
+// 在(100, 100)的位置绘制绿色矩形
+cvs_context.fillStyle = 'green';
+cvs_context.fillRect(100, 100, 100, 100);
+
+//在变型前，先将坐标轴保存
+cvs_context.save();
+
+// 坐标轴向X轴正向移动200px
+cvs_context.translate(200, 0);
+
+// 在(100, 100)的位置绘制绿色矩形
+cvs_context.fillStyle = 'green';
+cvs_context.fillRect(100, 100, 100, 100);
+
+// 在(150, 150)的位置绘制圆形
+cvs_context.beginPath();
+cvs_context.arc(150, 150, 50, 0, 2*Math.PI, true);
+cvs_context.closePath();
+cvs_context.stroke();
+
+// 将坐标轴恢复原状
+cvs_context.restore();
+
+//再次保存坐标轴
+cvs_context.save();
+
+// 在(150, 150)的位置绘制圆形
+cvs_context.beginPath();
+cvs_context.arc(150, 150, 50, 0, 2*Math.PI, true);
+cvs_context.closePath();
+cvs_context.stroke();
+
+// 在(500, 100)的位置绘制矩形边框
+cvs_context.strokeRect(500, 100, 100, 100);
+
+// 将坐标轴转30deg
+cvs_context.rotate(30*2*Math.PI/360);
+
+// 在(500, 100)的位置绘制矩形边框
+cvs_context.strokeRect(500, 100, 100, 100);
+
+// 将坐标轴恢复
+cvs_context.restore();
+
+cvs_context.fillRect(500, 100, 100, 100);
+
+// 将坐标轴x轴和y轴都缩都放到0.5倍
+cvs_context.scale(0.5, 0.5); //在CSS3中，如果只写一个参数，表示x轴与y轴等比缩放
+
+// 在(100, 100)的位置绘制矩形边框
+cvs_context.strokeRect(100, 100, 100, 100);
+~~~
