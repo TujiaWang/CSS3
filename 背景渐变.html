@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>背景渐变</title>
+    	<style>
+    		div{
+    			width: 300px;
+    			height: 300px;
+    			border: 1px solid #ccc;
+    			float: left;
+    			margin: 50px;
+    		}
+    		div:first-child{
+    			background-image:-webkit-linear-gradient(left,red,blue);
+    			background-image:-moz-linear-gradient(left,red,blue);
+    			background-image:-ms-linear-gradient(left,red,blue);
+    			background-image:-o-linear-gradient(left,red,blue);
+    			background-image:linear-gradient(to right,red,blue);
+    		}
+    		div:nth-child(2){
+    			background-image: -webkit-linear-gradient(top,red,blue);
+    			background-image: -moz-linear-gradient(top,red,blue);
+    			background-image: -ms-linear-gradient(top,red,blue);
+    			background-image: -o-linear-gradient(top,red,blue);
+    			background-image: linear-gradient(to bottom,blue,red);
+    		}
+    		div:nth-child(3){
+    			background-image:-webkit-linear-gradient(left top,red,blue);
+    			background-image:-moz-linear-gradient(left top,red,blue);
+    			background-image:-ms-linear-gradient(left top,red,blue);
+    			background-image:-o-linear-gradient(left top,red,blue);
+    			background-image:linear-gradient(to right bottom,red,blue);
+    		}
+    		div:nth-child(4){
+    			background-image:-webkit-linear-gradient(top,red,blue,orange);
+    			background-image:-moz-linear-gradient(top,red,blue,orange);
+    			background-image:-ms-linear-gradient(top,red,blue,orange);
+    			background-image:-o-linear-gradient(top,red,blue,orange);
+    			background-image:linear-gradient(to bottom,red,blue,orange);
+    		}
+    		div:nth-child(5){
+    			background-image:-webkit-linear-gradient(top,red,blue,orange,green);
+    			background-image:-moz-linear-gradient(top,red,blue,orange,green);
+    			background-image:-ms-linear-gradient(top,red,blue,orange,green);
+    			background-image:-o-linear-gradient(top,red,blue,orange,green);
+    			background-image:linear-gradient(to bottom,red,blue,orange,green);
+    		}
+    		div:nth-child(6){
+    			background-image:-webkit-linear-gradient(top,red,blue 20%,orange,green 240px);
+    			background-image:-moz-linear-gradient(top,red,blue 20%,orange,green 240px);
+    			background-image:-ms-linear-gradient(top,red,blue 20%,orange,green 240px);
+    			background-image:-o-linear-gradient(top,red,blue 20%,orange,green 240px);
+    			background-image:linear-gradient(to bottom,top,red,blue 20%,orange,green 240px);
+    		}
+    	</style>
+    </head>
+    <body>
+    	<div></div>
+    	<div></div>
+    	<div></div>
+    	<div></div>
+    	<div></div>
+    	<div></div>
+    </body>
+</html>

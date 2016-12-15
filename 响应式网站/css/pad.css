@@ -1,0 +1,143 @@
+/*
+* @Author: tujia
+* @Date:   2016-12-09 20:59:28
+* @Last Modified by:   tujia
+* @Last Modified time: 2016-12-09 23:44:37
+*/
+
+/* 平板样式 */
+body{
+	background: url('../images/bg2.jpg') no-repeat center top;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	width:auto\9; /* ie8 */
+	-ms-interpolation-mode:bicubic;/*为了照顾ie图片缩放失真*/
+}
+header{
+	width: auto;
+}
+header h1{
+	display: none;
+}
+
+nav{
+	width: auto;
+}
+nav ul:before{
+	display: none;
+}
+nav ul:after{
+	display: none;
+}
+nav ul li{
+	width: 11.11%;
+    padding: 0;
+    text-align: center;
+}
+nav ul li:last-child{
+	padding-right:0;
+}
+
+.banner{
+	width: auto;
+}
+.banner img{
+	width: auto;
+}
+
+.pro-wrapper{
+	width: auto;
+    background: none;
+    margin-left: 1%;
+    font-size: 14px;
+    font-weight: bold;
+}
+.products{
+	width: auto;
+	height: auto;
+}
+.products ul{
+	padding:0;
+	width:auto;
+}
+.products ul li{
+	width: 49%;
+	background: linear-gradient(0deg, #f0f0f0, #fafafa);
+	border-radius: 10px;
+	border: 1px solid #cccccc;
+	margin-right: 1%;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+    padding-bottom: 10px;
+    height: auto;
+}
+.qiye-info{
+	width: 99%;
+	height: auto;
+    overflow: hidden;
+    background: none;
+
+}
+.qiye-info .info-left,.info-middle,.info-right{
+	float: none;
+    width: auto;
+    background: #f6f6f6;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.img-wrap{
+	margin-left:25px;
+}
+.info-left p{
+	float: none;
+	margin-left:150px;
+	min-height: 110px;
+    padding-bottom: 10px;
+    width: auto;
+}
+.info-middle ul{
+	padding:0 0 20px 0;
+}
+.info-middle ul li{
+	width: 33.33%;
+    margin: 0;
+    text-align: center;
+}
+.info-right p{
+	padding-left: 36px;
+    padding-bottom: 10px;
+}
+.sub-nav{
+	width: 98%;
+    height: auto;
+    background: #cccccc;
+    border-radius: 10px;
+    margin-top:10px;
+}
+.sub-nav a{
+	font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+}
+footer{
+	height: auto;
+    width: 98%;
+    margin: 10px auto 0;
+    border: 0 none;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+footer div{
+	width: auto;
+}
+footer p{
+	margin-left: 20px;
+}
+footer h2{
+	margin-right: 20px;
+}

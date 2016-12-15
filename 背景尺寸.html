@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>背景尺寸</title>
+        <style>
+        	div{
+        		width: 300px;
+        		height: 300px;
+        		border:1px solid #ccc;
+        		background: url(images/02.jpg);
+        		float: left;
+        		margin:50px;
+        		font-size: 25px;
+        		color: #fff;
+        	}
+        	div:nth-child(2){
+				background-size: 100px 100px;
+        	}
+        	div:nth-child(3){
+				background-size: 100% 100%;
+        	}
+        	div:nth-child(4){
+				background-size: 100% auto;
+        	}
+        	div:nth-child(5){
+				background-size: auto 100%;
+        	}
+        	div:nth-child(6){
+				background-size: cover;
+        	}
+        	div:nth-child(7){
+				background-size: contain;
+        	}
+        </style>
+    </head>
+    <body>
+    	<div>我是默认的</div>
+    	<div>background-size:100px 100px;设定背景图大小</div>
+    	<div>background-size:100% 100%;宽度与高度与盒子等宽高</div>
+    	<div>background-size:100% auto;宽度与盒子等宽，高度自动等比例缩放</div>
+    	<div>background-size:auto 100%;高度与盒子等高，宽度自动等比例缩放</div>
+    	<div>background-size:cover;缩放背景图，到刚好覆盖该盒子</div>
+    	<div>background-size:contain;在保证背景图完整显示的情况下，缩放背景图到等高或等宽</div>
+    </body>
+</html>

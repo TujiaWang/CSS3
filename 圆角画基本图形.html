@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>圆角画基本图形</title>
+        <style>
+        	div{
+        		width: 200px;
+        		height: 200px;
+        		border: 1px solid #666;
+        		background: #ccc;
+        		float: left;
+        		margin:40px;
+        		line-height: 200px;
+        		text-align: center;
+        	}
+        	div:first-child{
+        		border-radius:20px;
+        		-webkit-border-radius:20px;
+        		-moz-border-radius:20px;
+        		-ms-border-radius:20px;
+        		-o-border-radius:20px;
+        	}
+        	div:nth-child(2){
+        		border-radius:20px 0;
+        	}
+        	div:nth-child(3){
+        		border-radius:20px 0 40px;
+        	}
+        	div:nth-child(4){
+        		border-radius:20px 0 40px 80px;
+        	}
+        	div:nth-child(5){
+        		border-top-left-radius:10px;
+        		border-top-right-radius:40px;
+        		border-bottom-right-radius:80px;
+        		border-bottom-left-radius:0;
+        	}
+        	div:nth-child(6){
+        		border-radius:101px;
+        	}
+        	div:nth-child(7){
+        		border-radius:101px;
+        	}
+        </style>
+    </head>
+    <body>
+    	<div>普通圆角</div>
+    	<div>设置两个值</div>
+    	<div>设置三个值</div>
+    	<div>设置四个值</div>
+    	<div>单个角设置</div>
+    	<div>正圆</div>
+    	<div>上圆角</div>
+    	<div>下圆角</div>
+    </body>
+</html>

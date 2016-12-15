@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>百度钱包</title>
+        <style>
+        	*{margin:0;padding: 0;}
+        	body{
+        		background: orangered;
+        	}
+        	.wrapper{
+        		position: relative;
+				width: 300px;
+				height: 300px;
+				margin:100px auto;
+        	}
+        	.wrapper div{
+        		width: 300px;
+        		height: 300px;
+        		background: url(images/04.png);
+        		position: absolute;
+        		left:0;
+        		top:0;
+        		perspective: 600;
+        		backface-visibility: hidden;
+        	}
+        	.wrapper div:first-child{
+				background-position: 0 -1995px;
+				z-index: 200;
+				transition: all 1s ease 0s;
+        	}
+        	.wrapper div:last-child{
+				background-position: -305px -1995px;
+				z-index:10;
+				transform: rotateY(180deg);
+				transition: all 1s ease 0s;
+        	}
+        	.wrapper:hover div:first-child{
+				transform: rotateY(180deg);
+        	}
+        	.wrapper:hover div:last-child{
+				transform: rotateY(360deg);
+        	}
+        </style>
+    </head>
+    <body>
+    	<div class="wrapper">
+    		<div></div>
+    		<div></div>
+    	</div>
+    </body>
+</html>

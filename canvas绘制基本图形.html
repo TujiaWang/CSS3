@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>绘制基本图形</title>
+	<style>
+		*{margin:0;padding:0}
+		canvas{
+			border: 1px solid orange;
+			margin:10px auto;
+			display:block;
+		}
+	</style>
+	<script>
+		window.onload = function(){
+			var cvs = document.getElementById('cvs');
+			if(cvs.getContext){
+				var cvs_context = cvs.getContext('2d');
+
+				//填充矩形
+				cvs_context.fillStyle = 'skyblue';
+				cvs_context.fillRect(10,10,200,200);
+
+				//描边矩形
+				cvs_context.strokeStyle = 'green'; //描边样式
+				cvs_context.lineWidth = 3;  //描边线的宽度
+				cvs_context.strokeRect(220,10,200,200);
+
+				//清除矩形
+				cvs_context.clearRect(20,20,180,180);
+
+				//绘制线段
+				cvs_context.beginPath();
+				cvs_context.moveTo(500,10);
+				cvs_context.lineTo(500,220);
+				cvs_context.strokeStyle = 'blue';
+				cvs_context.stroke(); //描边
+
+				// 绘制三角形
+				cvs_context.beginPath();    //开启新路径
+				cvs_context.moveTo(600, 100);
+				cvs_context.lineTo(650, 200);
+				cvs_context.lineTo(550, 200);
+				cvs_context.closePath();    //在开始位置与结束位置之间画线段，封闭路径
+				cvs_context.strokeStyle = 'rgba(255, 100, 0, 0.5)';
+				cvs_context.fill();
+				cvs_context.stroke();
+
+				// 绘制弧线
+				cvs_context.beginPath();
+				cvs_context.arc(150, 350, 100, 0, Math.PI, true);
+				cvs_context.strokeStyle = "#f60";
+				cvs_context.stroke();
+
+				cvs_context.beginPath();
+				cvs_context.arc(300, 350, 100, 0, Math.PI, false);
+				cvs_context.stroke();
+
+				cvs_context.beginPath();
+				cvs_context.arc(600, 400, 100, 0, Math.PI, true);
+				cvs_context.fill();
+
+				//画图片
+				var img = new Image();
+				img.src = 'images/tainiu.jpg';
+				img.onload = function(){
+					cvs_context.drawImage(img, 760, 100, 200, 250);
+				}
+
+				// 绘制文字
+				cvs_context.beginPath();
+				cvs_context.fillStyle = 'green';
+				cvs_context.font = '30px "微软雅黑"';
+				cvs_context.strokeText('土家肸哥', 790, 400);
+				cvs_context.fillText('土家肸哥', 790, 400);
+
+			}
+		}
+	</script>
+</head>
+<body>
+	<canvas width="1000" height="500" id="cvs">您的浏览器不支持canvas</canvas>
+</body>
+</html>

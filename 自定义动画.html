@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>自定义动画</title>
+        <style>
+        	div{
+        		background: url(images/51.jpg);
+        		height: 250px;
+        		width: 250px;
+        		position: absolute;
+        		left: 0;
+        	}
+        	/*从左向右移动(一次)*/
+        	/*div{
+				animation:move 2s ease 0s;
+        	}*/
+			
+			/*从左向右移动(一次，并停留在终点)*/
+			/*div{
+				animation:move 2s ease 0s forwards;
+			}*/
+
+			/*从左向右移动(延迟2秒才开始动画)*/
+			/*div{
+				animation:move 2s ease 2s;
+			}*/
+
+			/*从左向右移动(3次)*/
+			/*div{
+				animation:move 2s ease 0s 3;
+			}*/
+
+			/*从左向右交替移动5次*/
+			/*div{
+				animation:move 2s ease 0s forwards 5 alternate;
+			}*/
+
+			/*从左向右交替移动(无限次)*/
+			/*div{
+				animation:move 2s ease 0s alternate infinite;
+			}*/
+
+			/*从左向右先快后慢移动*/
+			div{
+				animation:fasttoslow 3s ease 0s;
+			}
+        	@keyframes move{
+        		from{
+					left:0;
+        		}
+        		to{
+					left:1000px;
+        		}
+        	}
+
+        	@keyframes fasttoslow{
+        		0%{
+        			left:20px;
+        		}
+        		70%{
+        			left:800px;
+        		}
+        		100%{
+        			left:1000px;
+        		}
+        	}
+        </style>
+    </head>
+    <body>
+    	1. 从左向右移动(一次)<br><br>
+
+		2. 从左向右移动(一次，并停留在终点)<br><br>
+
+		3. 从左向右移动(延迟2秒才开始动画)<br><br>
+
+		4. 从左向右移动(3次)<br><br>
+
+		5. 从左向右交替移动5次<br><br>
+
+		6. 从左向右交替移动(无限次)<br><br>
+
+		7. 从左向右先快后慢移动<br><br>
+
+		<div></div>
+    </body>
+</html>

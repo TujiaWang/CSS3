@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>自发光</title>
+        <style>
+        	*{margin:0;padding:0;}
+        	div{
+        		width: 140px;
+        		height: 140px;
+        		margin:50px auto;
+        		position: relative;
+        		/*border:1px solid red;*/
+        	}
+        	div img:first-child{
+        		animation:roll 2s linear 0s infinite;
+        	}
+        	div img:last-child{
+				position: absolute;
+				left:38px;
+				top:35px;
+				transform: rotateZ(-3deg);
+        	}
+        	@keyframes roll{
+        		0%{
+        			transform: rotateZ(0deg);
+        		}
+        		100%{
+        			transform: rotateZ(360deg);
+        		}
+        	}
+        </style>
+    </head>
+    <body>
+    	<div>
+    		<img src="images/06/sun.png" alt="">
+    		<img src="images/06/h5.png" alt="">
+    	</div>
+    </body>
+</html>

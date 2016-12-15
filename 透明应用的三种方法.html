@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>透明应用的三种方法</title>
+        <style>
+        	*{margin:0;padding:0;}
+        	section{
+        		width: 300px;
+        		height: 215px;
+        		position: relative;
+        		float: left;
+        		margin:20px;
+        	}
+        	section img{
+        		width: 100%;
+        		height: 100%;
+        	}
+        	section p{
+        		width: 290px;
+        		height: 40px;
+        		line-height: 40px;
+        		padding-left:10px;
+        		position: absolute;
+        		bottom: 0;
+        		left: 0;
+        		color:#fff;
+        	}
+        	section:first-child p{
+        		background: rgba(0,0,0,.5);
+        	}
+        	section:nth-child(2) div{
+        		width: 300px;
+        		height: 40px;
+        		line-height: 40px;
+        		position: absolute;
+        		bottom: 0;
+        		left: 0;
+        		background-color: #000;
+        		opacity: 0.5;
+        		filter: alpha(opacity=50);
+        	}
+        	section:last-child p{
+				background: url(images/bg1.png);
+        	}
+        </style>
+    </head>
+    <body>
+    	<section>
+    		<img src="images/baoya.jpg" alt="">
+    		<p>龅牙哥，茫然弟与无辜女</p>
+    	</section>
+    	<section>
+    		<img src="images/baoya.jpg" alt="">
+    		<div></div>
+    		<p>龅牙哥，茫然弟与无辜女</p>
+    	</section>
+    	<section>
+    		<img src="images/baoya.jpg" alt="">
+    		<p>龅牙哥，茫然弟与无辜女</p>
+    	</section>
+    </body>
+</html>

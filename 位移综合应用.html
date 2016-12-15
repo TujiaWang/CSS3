@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>位移综合应用</title>
+        <style>
+        	div{
+        		width: 300px;
+        		height: 300px;
+        		border:10px solid blue;
+        		margin:10px auto;
+        		perspective: 600px;
+        	}
+        	div img{
+        		transform:rotateX(20deg) rotateY(40deg) translateZ(1000px);
+        		transition:all 2s ease 0s;
+        	}
+        	div:hover img{
+				transform: rotate(0deg);
+        	}
+        </style>
+    </head>
+    <body>
+    	<div><img src="images/45.jpg" alt=""></div>
+    </body>
+</html>

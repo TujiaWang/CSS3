@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>背面不可见</title>
+        <style>
+        	div{
+        		width: 250px;
+        		height: 250px;
+        		border:1px solid blue;
+        		margin:50px auto;
+        		perspective: 600px;
+        	}
+        	img{
+        		transition: all 1s ease 0s;
+        		backface-visibility: hidden;
+        	}
+        	div:hover img{
+				transform: rotateY(180deg);
+        	}
+        </style>
+    </head>
+    <body>
+    	<div><img src="images/xiaoming.jpg" alt=""></div>
+    </body>
+</html>

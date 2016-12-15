@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>伪类选择器1</title>
+	<style>
+		*{margin:0;padding:0}
+		section{
+			margin:20px;
+			border: 1px solid #ccc;
+			height:100px;
+			padding:20px;
+		}
+		div{
+			width: 100px;
+			height: 100px;
+			border: 1px solid cyan;
+			float: left;
+			margin-right:20px;
+			text-align: center;
+			line-height: 100px;
+		}
+
+
+		/*文档根标签加灰*/
+		/*html{
+			background-color: #eee;
+		}*/
+		:root{
+			background-color: #eee;
+		}
+
+		/*每家的第二个孩子加橙色背景*/
+		/*section div:nth-child(2){
+			background-color: orange;
+		}*/
+
+		/*每家最大的孩子加紫色背景*/
+		/*section div:first-child{
+			background-color: purple;
+		}*/
+
+		/*每家最小的孩子加粉色背景*/
+		/*section div:last-child{
+			background-color: pink;
+		}*/
+
+		/*每家的倒数第二小的孩子加黑色背景*/
+		/*section div:nth-last-child(2){
+			background-color: black;
+		}*/
+
+		/*独生子女的孩子加红色背景*/
+		/*section div:only-child{
+			background-color: red;
+		}*/
+
+		/*排行偶数的孩子加绿色背景*/
+		/*section div:nth-child(2n){
+			background-color: green;
+		}*/
+		/*section div:nth-child(even){
+			background-color: green;
+		}*/
+
+		/*排行奇数的孩子加蓝色背景*/
+		/*section div:nth-child(2n+1){
+			background-color: blue;
+		}*/
+		/*section div:nth-child(odd){
+			background-color: blue;
+		}*/
+
+		/*排行前三的孩子加灰色背景*/
+		/*section div:nth-child(-n+3){
+			background-color: gray;
+		}*/
+	</style>
+</head>
+<body>
+	<section>
+		<div>div</div>
+		<div>div</div>
+	</section>
+	<section>
+		<div>div</div>
+		<div>div</div>
+		<div>div</div>
+		<div>div</div>
+		<div>div</div>
+		<div>div</div>
+	</section>
+	<section>
+		<div>div</div>
+	</section>
+
+	1. 文档根标签加灰<br><br>
+
+2. 每家的第二个孩子加橙色背景<br><br>
+
+3. 每家最大的孩子加紫色背景<br><br>
+
+4. 每家最小的孩子加粉色背景<br><br>
+
+5. 每家的倒数第二小的孩子加黑色背景<br><br>
+
+6. 独生子女的孩子加红色背景<br><br>
+
+7. 排行偶数的孩子加绿色背景<br><br>
+
+8. 排行奇数的孩子加蓝色背景<br><br>
+
+9. 排行前三的孩子加灰色背景
+<br><br>
+</body>
+</html>

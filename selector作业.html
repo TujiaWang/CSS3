@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>selector作业</title>
+        <style>
+        	*{margin:0;padding:0;}
+        	ul,li{list-style: none;}
+        	section{
+        		width:974px;
+        		margin:10px auto;
+        	}
+        	section:first-child ul li{
+        		height:20px;
+        	}
+        	section:first-child ul li:nth-child(even){
+        		background: #ccc;
+        	}
+        	section:first-child ul li:nth-child(odd){
+        		background: #f0f;
+        	}
+        	section:nth-child(2) ul{
+        		overflow: hidden;
+        		border:2px solid #f0f;
+        	}
+        	section:nth-child(2) ul li{
+        		width:320px;
+        		height: 300px;
+        		background: #f0f;
+        		float: left;
+        		margin:5px 0 0 5px;
+        	}
+
+        	section:nth-child(2) li:nth-child(3n+1){
+        		margin-left:0;
+        	}
+
+        	section:nth-child(2) li:nth-child(-n+3){
+        		margin-top:0;
+        	}
+        </style>
+    </head>
+    <body>
+    	<section>
+    		<ul>
+    			<li></li>
+    			<li></li>
+    			<li></li>
+    			<li></li>
+    			<li></li>
+    			<li></li>
+    			<li></li>
+    			<li></li>
+    			<li></li>
+    			<li></li>
+    		</ul>
+    	</section>
+    	<section>
+    		<ul>
+    			<li></li>
+    			<li></li>
+    			<li></li>
+    			<li></li>
+    			<li></li>
+    			<li></li>
+    			<li></li>
+    			<li></li>
+    			<li></li>
+    		</ul>
+    	</section>
+    </body>
+</html>

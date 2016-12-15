@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>透视点控制</title>
+        <style>
+        	*{
+        		margin:0;
+        		padding:0;
+        	}
+        	.nav-wrapper{
+        		background: #5e5e5e;
+        		width:100%;
+        		height:70px;
+        		position: fixed;
+        		left:0;
+        		bottom:0;
+        	}
+        	.nav{
+        		width: 618px;
+        		margin:0 auto;
+        		height: 70px;
+        	}
+        	.stage{
+        		perspective:1600px;
+				perspective-origin: 100px 0px;
+        	}
+        	.nav div{
+        		height: 70px;
+        		width: 200px;
+        		margin:0 3px;
+        		float:left;
+        	}
+        	.nav ul{
+        		position: relative;
+        		width: 100%;
+        		height: 100%;
+        		list-style: none;
+        		transform-style: preserve-3d;
+        		transition:all 1s ease 0s;
+        	}
+        	.nav ul li{
+        		position:absolute;
+        		left:0;
+        		top:0;
+        		width: 100%;
+        		height: 100%;
+        	}
+        	.nav li:nth-child(1){
+				background-color: #5e5e5e;
+				transform:translateZ(35px);
+			}
+        	.nav ul li:nth-child(2){
+        		background-color: #a3bb43;
+        		transform: rotateX(-90deg) translateZ(35px);
+        	}
+        	.nav li a{
+        		width: 100%;
+			    height: 100%;
+			    display: block;
+			    text-align: center;
+			    color: #e3e3e3;
+			    text-decoration: none;
+			    font: 21px/70px "微软雅黑";
+        	}
+        	.stage:hover ul{
+        		transform: rotateX(90deg);
+        	}
+        </style>
+    </head>
+    <body>
+    	<div class="nav-wrapper">
+    		<div class="nav">
+    			<div class="stage">
+    				<ul>
+    					<li><a href="">服务范围</a></li>
+    					<li><a href="">服务范围</a></li>
+    				</ul>
+    			</div>
+    			<div class="stage">
+    				<ul>
+    					<li><a href="">实施感悟</a></li>
+    					<li><a href="">实施感悟</a></li>
+    				</ul>
+    			</div>
+    			<div class="stage">
+    				<ul>
+    					<li><a href="">荣誉客户</a></li>
+    					<li><a href="">荣誉客户</a></li>
+    				</ul>
+    			</div>
+    		</div>
+    	</div>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+/*
+* @Author: tujia
+* @Date:   2016-12-09 20:59:28
+* @Last Modified by:   tujia
+* @Last Modified time: 2016-12-09 23:54:39
+*/
+nav ul{
+	display: none;
+}
+nav select{
+	display: block;
+	width: 100%;
+}
+footer p{
+	float: none;
+}
+footer h2{
+	float: none;
+	text-align: center;
+}
+.products ul li{
+	width: 99%;
+}

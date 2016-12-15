@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>翻书效果</title>
+        <style>
+        	div{
+        		width: 258px;
+        		height: 258px;
+        		position: relative;
+        		perspective: 600px;
+        		float: left;
+        		margin:50px 10px;
+        	}
+        	div img{
+        		border-radius: 50%;
+        		display: block;
+        		position: absolute;
+        		left:0;
+        		top:0;
+        		transition: all 1s ease 0s;
+        	}
+        	div:first-child img:last-child{
+				transform-origin: 0 bottom;
+        	}
+        	div:first-child:hover img:last-child{
+				transform: rotateX(-180deg);
+        	}
+
+        	div:nth-child(2) img:last-child{
+				transform-origin: left 0;
+        	}
+        	div:nth-child(2):hover img:last-child{
+				transform: rotateY(-180deg);
+        	}
+
+        	div:nth-child(3) img:last-child{
+				transform-origin: 0 top;
+        	}
+        	div:nth-child(3):hover img:last-child{
+				transform: rotateX(180deg);
+        	}
+
+        	div:nth-child(4) img:last-child{
+				transform-origin: right 0;
+        	}
+        	div:nth-child(4):hover img:last-child{
+				transform: rotateY(180deg);
+        	}
+        </style>
+    </head>
+    <body>
+    	<div><img src="images/43/baby.png" alt=""><img src="images/43/xiaoming.png" alt=""></div>
+    	<div><img src="images/43/baby.png" alt=""><img src="images/43/xiaoming.png" alt=""></div>
+    	<div><img src="images/43/baby.png" alt=""><img src="images/43/xiaoming.png" alt=""></div>
+    	<div><img src="images/43/baby.png" alt=""><img src="images/43/xiaoming.png" alt=""></div>
+    </body>
+</html>

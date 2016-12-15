@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>二维变形基础</title>
+        <style>
+        	div{
+        		width: 300px;
+        		height: 300px;
+        		border: 1px solid blue;
+        		float: left;
+        		margin:60px;
+        	}
+        	div img{
+        		border: 1px solid #ccc;
+        	}
+        	div:nth-of-type(1) img{
+				transform:rotate(45deg);
+        	}
+        	div:nth-of-type(2) img{
+        		transform:skew(10deg,10deg);
+        	}
+        	div:nth-of-type(3) img{
+        		transform:scale(.5);
+        	}
+        	div:nth-of-type(4) img{
+        		transform:translate(-30px,30px);
+        	}
+        	div:nth-of-type(5) img{
+        		transform:rotate(45deg) translate(-30px,0);
+        	}
+        	div:nth-of-type(6) img{
+        		transform:skew(10deg,10deg) translate(-30px,0);
+        	}
+        	div:nth-of-type(7) img{
+        		transform:translate(-50px,50px) scale(.5);
+        	}
+        	div:nth-of-type(8) img{
+        		transform:scale(.5) translate(-50px,50px)
+        	}
+        	div:nth-of-type(9) img{
+        		transform:translate(50%,50%)
+        	}
+        </style>
+    </head>
+    <body>
+    	1. 旋转45度<br><br>
+
+		2. 垂直方向斜切10度，水平方向斜切10度<br><br>
+
+		3. 水平和垂直方向都缩小到一半<br><br>
+
+		4. 向左平移30px，向下平移30px<br><br>
+
+		5. 先旋转45度，然后向x轴负向平移30px<br><br>
+
+		6. 先水平垂直方向斜切10度，然后向x轴负向平移30px<br><br>
+
+		7. 先向x轴负向平移50px，向y轴正向平移50px，然后再缩放到一半<br><br>
+
+		8. 先缩放到一半，然后向x轴负向平移50px，向y轴正向平移50px<br><br>
+
+		9. 向x正向平移50%，向y轴正向平移50%<br><br>
+
+		<div><img src="images/34.jpg" alt=""></div>
+		<div><img src="images/34.jpg" alt=""></div>
+		<div><img src="images/34.jpg" alt=""></div>
+		<div><img src="images/34.jpg" alt=""></div>
+		<div><img src="images/34.jpg" alt=""></div>
+		<div><img src="images/34.jpg" alt=""></div>
+		<div><img src="images/34.jpg" alt=""></div>
+		<div><img src="images/34.jpg" alt=""></div>
+		<div><img src="images/34.jpg" alt=""></div>
+    </body>
+</html>

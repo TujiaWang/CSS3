@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>过渡动画基础</title>
+        <style>
+        	img{
+	        	width:100px;
+	        	height:100px;
+	        	display: block;
+	        	margin:10px 0;
+	        }
+	        img:first-child{
+				transition: width 1s ease 0s;
+	        }
+	        img:first-child:hover{
+				width:300px;
+	        }
+	        img:nth-child(2){
+	        	transition: height 1s ease 0s;
+	        }
+	        img:nth-child(2):hover{
+	        	height:300px;
+	        }
+	        img:nth-child(3){
+	        	transition: width 1s ease 1s;
+	        }
+	        img:nth-child(3):hover{
+	        	width:300px;
+	        }
+	        img:nth-child(4){
+	        	transition: width 1s ease 0s,height 1s ease 0s;
+	        }
+	        img:nth-child(4):hover{
+	        	width:300px;
+	        	height:300px;
+	        }
+	        img:nth-child(5){
+	        	-webkit-transition: all 1s ease 0s;
+	        	-moz-transition: all 1s ease 0s;
+	        	-ms-transition: all 1s ease 0s;
+	        	-o-transition: all 1s ease 0s;
+	        	transition: all 1s ease 0s;
+	        }
+	        img:nth-child(5):hover{
+	        	width:300px;
+	        	height:300px;
+	        }
+	        div{
+	        	width: 100px;
+	        	height: 100px;
+	        	line-height: 100px;
+	        	border:1px solid black;
+	        	transition: all 1s ease 0s;
+	        	text-align: center;
+	        }
+	        div:hover{
+				height: 300px;
+				width: 300px;
+				border-radius:300px;
+				line-height: 300px;
+				border:10px solid blue;
+				box-shadow: 20px 30px 30px 40px red;
+	        }
+        </style>
+    </head>
+    <body>
+    	<img src="images/31.jpg" alt="">
+    	<img src="images/31.jpg" alt="">
+    	<img src="images/31.jpg" alt="">
+    	<img src="images/31.jpg" alt="">
+    	<img src="images/31.jpg" alt="">
+    	<div>文字君</div>
+    </body>
+</html>

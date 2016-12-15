@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>变形中心点控制</title>
+        <style>
+        	div{
+        		margin:10px 30px;
+        		display: inline-block;
+        	}
+        	div:first-child{
+        		width: 400px;
+        		height: 250px;
+        	}
+        	div:first-child img{
+        		transition: all 1s ease 0s;
+        		transform-origin: 200px 200px;
+        	}
+        	div:first-child:hover img{
+        		transform: rotate(180deg);
+        	}
+        	div:nth-child(2){
+        		width: 48px;
+			    height: 48px;
+			    background: url(images/39/bg.png);
+			    border-radius:3px;
+			    overflow: hidden;
+        	}
+        	div:nth-child(2) a{
+				width: 48px;
+    			height: 48px;
+    			display: block;
+    			color: white;
+			    text-align: center;
+			    line-height: 48px;
+			    text-decoration: none;
+			    font-size: 12px;
+			    font-weight: bold;
+			    background-color: #18448e;
+			    transform-origin: left top;
+			    transform: rotate(90deg);
+			    transition:all 1s ease 0s;
+        	}
+        	div:nth-child(2):hover a{
+        		transform: rotate(0deg);
+        	}
+
+        	div:nth-child(3){
+        		width: 48px;
+			    height: 48px;
+			    background: url(images/39/bg.png) 0 -204px;
+			    border-radius:3px;
+			    overflow: hidden;
+        	}
+        	div:nth-child(3) a{
+				width: 48px;
+    			height: 48px;
+    			display: block;
+    			color: white;
+			    text-align: center;
+			    line-height: 48px;
+			    text-decoration: none;
+			    font-size: 12px;
+			    font-weight: bold;
+			    background-color: #18448e;
+			    transform-origin: 0 80%;
+			    transform: rotate(-180deg);
+			    transition:all .5s ease 0s;
+        	}
+        	div:nth-child(3):hover a{
+        		transform: rotate(0deg);
+        	}
+        </style>
+    </head>
+    <body>
+    	<div><img src="images/39/fan.jpg" alt=""></div>
+    	<div><a href="">二维码</a></div>
+    	<div><a href="">搜索</a></div>
+    </body>
+</html>

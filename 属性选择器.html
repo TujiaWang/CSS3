@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>属性选择器</title>
+	<style>
+		/*img.cartoon{
+			border:3px solid yellow;
+		}*/
+		/*img[alt]{
+			border:3px solid yellow;
+		}*/
+		/*选择具有title属性的图片，加灰边*/
+		/*img[title]{
+			border:3px solid #ccc;
+		}*/
+		/* 具有title属性，且title属性为"小狗"，加黑边 */
+		/*img[title="小狗"]{
+			border:3px solid #000;
+		}*/
+		/* 具有title属性，且title属性中包含有"猫"，加紫边 */
+		/*img[title*="猫"]{
+			border:3px solid purple;
+		}*/
+		/* 具有title属性，且title属性中以"猫"开头，加粉边 */
+		/*img[title^="猫"]{
+			border:3px solid pink;
+		}*/
+		/* 具有title属性，且title属性中以"猫"结尾，加绿边 */
+		/*img[title$="猫"]{
+			border:3px solid green;
+		}*/
+		/* 具有alt属性，且alt属性中的"猫"是以空格分隔的独立部分，加青边 */
+		/*img[alt~="猫"]{
+			border:3px solid cyan;
+		}*/
+		/* 具有alt属性，且alt属性为"猫"或者以"猫-"开头，加深红色边 */
+		/*img[alt|="猫"]{
+			border:3px solid darkred;
+		}*/
+		/* 选择具有title和alt属性的图片，加蓝边 */
+		/*img[title][alt]{
+			border:3px solid blue;
+		}*/
+		/* 具有title属性，有id属性，有alt属性，加红边 */
+		/*img[title][alt][id]{
+			border:3px solid red;
+		}*/
+		/* 选择具有.cartoon类的图片，加橙色边（属性选择器的方式） */
+		img[class="cartoon"]{
+			border:3px solid orange;
+		}
+	</style>
+</head>
+<body>
+	<img src="images/02/1.jpg" width="320" height="250" title='猫' alt='猫'>
+	<img src="images/02/2.jpg" width="320" height="250" title='机器猫' class="cartoon box">
+    <img src="images/02/3.jpg" width="320" height="250" title='加菲猫' alt='加菲猫' class="cartoon ">
+    <img src="images/02/4.jpg" width="320" height="250" title='猫和老鼠' alt="猫 和老鼠" class="cartoon">
+    <img src="images/02/5.jpg" width="320" height="250" title='龙猫' alt='龙-猫' id='龙猫' class="cartoon">
+    <img src="images/02/6.jpg" width="320" height="250" title='黑猫警长' class="cartoon">
+    <img src="images/02/7.jpg" width="320" height="250" title='小狗'>
+    <img src="images/02/8.jpg" width="320" height="250" title='猫王' alt='猫-王'>
+    <br><br>
+    0. 选择具有.cartoon类的图片，加黄边<br><br>
+    1. 选择具有alt属性的图片，加橙色边<br><br>
+	2. 选择具有title属性的图片，加灰边<br><br>
+	3. 选择满足以下条件的图片：具有title属性，且title属性为"小狗"，加黑边<br><br>
+	4. 选择满足以下条件的图片：具有title属性，且title属性中包含有"猫"，加紫边<br><br>
+	5. 选择满足以下条件的图片：具有title属性，且title属性中以"猫"开头，加粉边<br><br>
+	6. 选择满足以下条件的图片：具有title属性，且title属性中以"猫"结尾，加绿边<br><br>
+    7. 选择满足以下条件的图片：具有alt属性，且alt属性中的"猫"是以空格分隔的独立部分，加青边<br><br>
+    8. 选择满足以下条件的图片：具有alt属性，且 alt属性为"猫"或者以"猫-"开头，加深红色边<br><br>
+	9. 选择具有title和alt属性的图片，加蓝边<br><br>
+	10. 选择满足以下条件的图片：具有title属性，有id属性，有alt属性，加红边<br><br>
+	11. 选择具有.cartoon类的图片，加橙色边（属性选择器的方式）<br><br>
+
+</body>
+</html>

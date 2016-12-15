@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>3d旋转</title>
+        <style>
+        	div{
+        		width: 300px;
+        		height: 300px;
+        		border: 1px solid blue;
+        		float:left;
+        		margin:100px 150px;
+        		perspective:600px;
+        	}
+        	/*默认的旋转轴向*/
+			div:nth-child(1) img{
+				transform:rotate(45deg);
+        	}
+			/*绕z轴旋转*/
+			div:nth-child(2) img{
+				transform:rotateZ(45deg);
+			}
+			/*绕x轴旋转*/
+			div:nth-child(3) img{
+				transform:rotateX(45deg);
+			}
+
+			/*绕y轴旋转*/
+			div:nth-child(4) img{
+				transform:rotateY(45deg);
+			}
+        </style>
+    </head>
+    <body>
+    	<div><img src="images/40.jpg" alt=""></div>
+    	<div><img src="images/40.jpg" alt=""></div>
+    	<div><img src="images/40.jpg" alt=""></div>
+    	<div><img src="images/40.jpg" alt=""></div>
+    </body>
+</html>

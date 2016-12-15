@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>伪类选择器2</title>
+	<style>
+		*{margin:0;padding:0}
+		section{
+			margin:20px;
+			border: 1px solid #ccc;
+			height:100px;
+			padding:20px;
+		}
+		div,p{
+			width: 100px;
+			height: 100px;
+			border: 1px solid cyan;
+			float: left;
+			margin-right:20px;
+			text-align: center;
+			line-height: 100px;
+		}
+		p{
+			border: 1px solid pink;
+		}
+
+
+		/*每个section下的第二个div（每家的第二个儿子）加黄色背景*/
+		/*section div:nth-of-type(2){
+			background-color: orange;
+		}*/
+	
+		/*每个section下的第一个p（每家的第一个女儿）加橙色色背景*/
+		/*section p:first-of-type{
+			background-color: orange;
+		}*/
+		/*section p:nth-of-type(1){
+			background-color: orange;
+		}*/
+
+		/*每个section下的最后一个p（每家最小的女儿）加绿色色背景*/
+		/*section p:last-of-type{
+			background-color: green;
+		}*/
+
+		/*每个section下的倒数第二个div（每家的第二小的儿子）加紫色背景*/
+		/*section div:nth-last-of-type(2){
+			background-color: purple;
+		}*/
+
+		/*每个section下的唯一div（每家的独子）加蓝色背景*/
+		/*section div:only-of-type{
+			background-color: blue;
+		}*/
+
+		/*每个section下的唯一p（每家的独女）加粉色背景*/
+		/*section p:only-of-type{
+			background-color: pink;
+		}*/
+
+		/*每个section下的唯一div和唯一p（每家的独子和独女）加灰色背景*/
+		/*section div:only-of-type,p:only-of-type{
+			background-color: gray;
+		}*/
+
+		/*每个section下排在奇数的div（排行奇数的儿子）加红色背景*/
+		/*section div:nth-of-type(2n+1){
+			background-color: red;
+		}*/
+		/*section div:nth-of-type(odd){
+			background-color: red;
+		}*/
+
+		/*每个section下排在偶数的p（排行偶数的女儿）加深红色背景*/
+		/*section p:nth-of-type(2n){
+			background-color: darkred;
+		}*/
+		/*section p:nth-of-type(even){
+			background-color: darkred;
+		}*/
+
+		/*每个section下排名前2的div（大儿子和二儿子）加青色背景*/
+		section div:nth-of-type(-n+2){
+			background-color: cyan;
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<div>div(儿子)</div>
+		<p>p(女儿)</p>
+	</section>
+	<section>
+		<div>div(儿子)</div>
+		<p>p(女儿)</p>
+		<div>div(儿子)</div>
+		<p>p(女儿)</p>
+		<div>div(儿子)</div>
+		<p>p(女儿)</p>
+	</section>
+	<section>
+		<p>p(女儿)</p>
+	</section>
+
+	1. 每个section下的第二个div（每家的第二个儿子）加黄色背景<br><br>
+
+2. 每个section下的第一个p（每家的第一个女儿）加橙色色背景<br><br>
+
+3. 每个section下的最后一个p（每家最小的女儿）加绿色色背景<br><br>
+
+4. 每个section下的倒数第二个div（每家的第二小的儿子）加紫色背景<br><br>
+
+5. 每个section下的唯一div（每家的独子）加蓝色背景<br><br>
+
+6. 每个section下的唯一p（每家的独女）加粉色背景<br><br>
+
+7. 每个section下的唯一div和唯一p（每家的独子和独女）加灰色背景<br><br>
+
+8. 每个section下排在奇数的div（排行奇数的儿子）加红色背景<br><br>
+
+9. 每个section下排在偶数的p（排行偶数的女儿）加深红色背景<br><br>
+
+10. 每个section下排名前2的div（大儿子和二儿子）加青色背景
+<br><br>
+</body>
+</html>

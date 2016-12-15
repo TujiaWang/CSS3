@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>构建立方体</title>
+        <style>
+        	div{
+        		width: 400px;
+        		height: 400px;
+        		margin:100px auto;
+        		perspective: 1600px;
+        	}
+        	ul{
+        		list-style: none;
+        		width: 400px;
+        		height: 400px;
+        		position: relative;
+        		transform-style: preserve-3d;
+        		transition:all 2s ease 0s;
+        	}
+        	li{
+        		width: 400px;
+        		height: 400px;
+        		position: absolute;
+        		left:0;
+        		top:0;
+        	}
+        	/*正面*/
+        	ul li:nth-child(1){
+        		background: url(images/46/1.jpg);
+				transform: translateZ(200px);
+				z-index:1;
+        	}
+        	/*上面*/
+        	ul li:nth-child(2){
+        		background: url(images/46/2.jpg);
+        		transform: rotateX(90deg) translateZ(200px);
+        	}
+        	/*后面*/
+        	ul li:nth-child(3){
+        		background: url(images/46/3.jpg);
+        		transform: rotateX(180deg) translateZ(200px);
+        	}
+        	/*下面*/
+        	ul li:nth-child(4){
+        		background: url(images/46/4.jpg);
+        		transform: rotateX(-90deg) translateZ(200px);
+        	}
+        	/*左面*/
+        	ul li:nth-child(5){
+        		background: url(images/46/5.jpg);
+        		transform: rotateY(-90deg) translateZ(200px);
+        	}
+        	/*右面*/
+        	ul li:nth-child(6){
+        		background: url(images/46/6.jpg);
+        		transform: rotateY(90deg) translateZ(200px);
+        	}
+
+        	div:hover ul{
+				transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+        	}
+        </style>
+    </head>
+    <body>
+    	<div>
+    		<ul>
+    			<li>正面</li>
+    			<li>上面</li>
+    			<li>后面</li>
+    			<li>下面</li>
+    			<li>左面</li>
+    			<li>右面</li>
+    		</ul>
+    	</div>
+    </body>
+</html>

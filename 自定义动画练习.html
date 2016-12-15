@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>自定义动画练习</title>
+        <style>
+        	body{
+        		padding-top:300px;
+        	}
+        	div{
+        		float: left;
+        	}
+        	div:first-child span{
+        		background: url(images/52/ball.png);
+        		display: block;
+        		height: 50px;
+        		width: 50px;
+        		animation:jump 1s ease-in 0s infinite alternate;
+        	}
+
+        	@keyframes jump{
+        		from{
+					transform: translateY(-300px);
+        		}
+        		to{
+					transform: translateY(0);
+        		}
+        	}
+
+        	div:nth-child(2) span{
+        		width: 224px;
+        		height: 224px;
+        		display: block;
+        		background: url(images/52/fengche.png);
+        		animation: xuanzhuan 2s linear 0s infinite;
+        	}
+
+			@keyframes xuanzhuan{
+				from{
+					transform: rotateZ(0deg);
+				}
+				to{
+					transform: rotateZ(-360deg);
+				}
+			}
+        	
+        </style>
+    </head>
+    <body>
+    	<div><span></span></div>
+    	<div><span></span></div>
+    </body>
+</html>

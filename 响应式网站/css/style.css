@@ -1,0 +1,253 @@
+/*
+* @Author: tujia
+* @Date:   2016-12-09 20:59:28
+* @Last Modified by:   tujia
+* @Last Modified time: 2016-12-10 10:16:55
+*/
+@charset "utf-8";
+
+/* 基本样式 */
+body,div,p,span,ul,li,dl,dt,dd,a,ol,input,img,h1,h2,h3,h4{ padding:0; margin:0; list-style:none; border:0;}
+body{ 
+	font-family:"宋体"; 
+	color:#616161; 
+	font-size:12px; 
+	background:url(../images/_r1_c1.jpg) no-repeat center 0;
+}
+a{ 
+	color:#fff; 
+	text-decoration:none;
+}
+a:hover{ 
+	text-decoration:underline;
+}
+
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+
+/* 头部样式 */
+header{
+	height: 99px;
+	padding-top:20px;
+	width: 980px;
+	margin:0 auto;
+}
+
+/* 导航部分 */
+nav{
+	height: 60px;
+	font-size:14px;
+	width: 980px;
+	margin:0 auto;
+}
+nav select{
+	display: none;
+}
+nav ul li{
+	float: left;
+	padding: 0 22px;
+	background: url(../images/line.jpg) no-repeat right center;
+}
+nav ul li:last-child{
+	padding-right:30px;
+	background: none;
+}
+nav ul{
+    height: 60px;
+    background: url(../images/center.jpg) repeat-x;
+    line-height: 45px;
+    font-weight: bold;
+}
+nav ul:before{
+	content: '';
+	float: left;
+    width: 20px;
+    height: 60px;
+    background: url(../images/r6_c2.jpg);
+}
+nav ul:after{
+	content: '';
+	float: left;
+    width: 20px;
+    height: 60px;
+    background: url(../images/r6_c8.jpg);
+}
+
+.banner{
+	width: 980px;
+	margin:0 auto;
+}
+
+/* 产品列表 */
+.pro-wrapper{
+	/*height: 302px;*/
+    background: #fff url(../images/index_r9_c3.jpg) no-repeat 0 0;
+    padding-top: 9px;
+    width: 980px;
+	margin:9px auto 0;
+}
+.products{
+	height: 92px;
+	border-bottom: 1px solid #ccc;
+}
+.products ul{
+	padding-left: 9px;
+	overflow: hidden;
+}
+.products ul li{
+	width: 236px;
+    height: 84px;
+    background: url(../images/_r2_c2.jpg);
+    float: left;
+    margin-right: 6px;
+}
+.products ul li h3{
+	height: 30px;
+    width: 104px;
+    background: url(../images/jingling1.jpg) no-repeat -7px 0;
+    margin-top: 4px;
+    margin-left: 11px;
+}
+.products ul li:nth-child(2) h3{
+	background-position:-7px -30px;
+}
+.products ul li:nth-child(3) h3{
+	background-position:-7px -60px;
+}
+.products ul li:nth-child(4) h3{
+	background-position:0 -90px;
+}
+.products h3 a{
+	width: 100%;
+	height: 100%;
+	text-indent: -9999em;
+	display: block;
+}
+.products p{
+	padding: 0 14px 0 51px;
+    line-height: 18px;
+}
+.qiye-info{
+	height: 209px;
+    background: url(../images/index_r12_c4.jpg) repeat-x;
+}
+.qiye-info .title{
+	height: 73px;
+}
+.qiye-info .title h3{
+	float: left;
+    height: 38px;
+    width: 185px;
+    background: url(../images/index_r9_c2.jpg);
+    margin: 10px 0 0 10px;
+}
+.qiye-info .title h3 a{
+	width: 100%;
+    height: 100%;
+    display: block;
+    text-indent: -999px;
+}
+.title span{
+	float: right;
+    margin: 20px 12px 0 0;
+}
+.qiye-info .info-left{
+	height: 100%;
+    width: 323px;
+    background: url(../images/line02.jpg) no-repeat right 0;
+}
+.info-left .desc{
+	padding: 0 10px;
+	overflow: hidden;
+}
+.img-wrap{
+	float: left;
+}
+.img-wrap img{
+	border: 1px solid #ccc;
+    padding: 2px;
+}
+.info-left p{
+	float: right;
+	width: 190px;
+    line-height: 20px;
+}
+.info-left p a{
+	color: #398d00;
+}
+.info-middle{
+    background: url(../images/line02.jpg) no-repeat right 0;
+    width: 407px;
+}
+.info-middle ul{
+	padding-left: 12px;
+	overflow: hidden;
+}
+.info-middle ul li{
+	float: left;
+	width: 121px;
+	margin-right: 10px;
+}
+.info-middle ul p a{
+	color:#616161;
+}
+.info-middle ul p{
+	text-align: center;
+    line-height: 20px;
+}
+.info-middle ul a img{
+	border: 1px solid #ccc;
+}
+.info-right p{
+	line-height: 20px;
+    padding-left: 12px;
+}
+
+/* 顶部导航 */
+.sub-nav{
+	text-align: center;
+    background: url(../images/_c16.jpg) repeat-x;
+    height: 34px;
+    line-height: 34px;
+    color: #fff;
+    border: 1px solid #ddd;
+    width: 980px;
+	margin:10px auto 0;
+}
+.sub-nav ul li{
+	float: left;
+}
+
+/* 版权部分 */
+footer{
+	margin-top: 1px;
+    height: 88px;
+    border-bottom: 3px solid #69ba17;
+    background: url(../images/index_r17_c2.jpg) repeat-x;
+    overflow: hidden;
+}
+footer div{
+	width: 980px;
+	margin:0 auto;
+}
+footer p{
+	float: left;
+    margin-top: 20px;
+    line-height: 22px;
+}
+footer h2{
+	float: right;
+    margin-top: 17px;
+}
+
+
+
+
+
+
+
+
